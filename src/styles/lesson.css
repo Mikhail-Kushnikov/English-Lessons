@@ -8,12 +8,12 @@
   position: relative;
   padding: clamp(1rem, 4vw, 2.5rem);
   background:
-    radial-gradient(circle at 91% 4%, rgba(200, 143, 142, 0.12), transparent 19%),
-    radial-gradient(circle at 7% 68%, rgba(200, 183, 162, 0.13), transparent 20%),
+    radial-gradient(circle at 91% 4%, rgba(var(--glow-accent-rgb), 0.12), transparent 19%),
+    radial-gradient(circle at 7% 68%, rgba(var(--glow-warm-rgb), 0.13), transparent 20%),
     repeating-linear-gradient(
       0deg,
-      rgba(75, 60, 45, 0.014) 0,
-      rgba(75, 60, 45, 0.014) 1px,
+      rgba(var(--grain-rgb), 0.014) 0,
+      rgba(var(--grain-rgb), 0.014) 1px,
       transparent 1px,
       transparent 8px
     ),
@@ -26,7 +26,7 @@
   content: "";
   position: absolute;
   inset: clamp(0.5rem, 2vw, 1rem);
-  border: 1px solid rgba(101, 95, 89, 0.25);
+  border: 1px solid rgba(var(--frame-rgb), 0.25);
   border-radius: calc(var(--radius-xl) - 0.25rem);
   pointer-events: none;
 }
@@ -48,7 +48,7 @@
 .lesson-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
-  color: #806f62;
+  color: var(--eyebrow);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -148,7 +148,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7d6d60;
+  color: var(--time-label);
   font-weight: 800;
 }
 
@@ -171,7 +171,7 @@
 }
 
 .warm-card {
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
   border-left: 4px solid var(--rose);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: var(--space-md);
@@ -202,7 +202,7 @@
 }
 
 .task {
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -250,7 +250,7 @@
   display: inline-block;
   min-width: clamp(4rem, 12vw, 7rem);
   height: 1.25em;
-  border-bottom: 2px solid #75685d;
+  border-bottom: 2px solid var(--blank-line);
   vertical-align: baseline;
 }
 
@@ -272,7 +272,7 @@
 .follow {
   margin-top: var(--space-md);
   padding: var(--space-sm) var(--space-md);
-  background: #eee4d7;
+  background: var(--surface-muted);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
   color: var(--muted);
@@ -292,7 +292,7 @@
 
 .answer-line {
   display: block;
-  border-bottom: 1px solid #948579;
+  border-bottom: 1px solid var(--answer-line);
   height: 1.5rem;
   margin-top: 0.35rem;
 }
@@ -304,7 +304,7 @@
 
 .switch-row b {
   display: block;
-  color: #8d5f5d;
+  color: var(--label-accent);
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -351,7 +351,7 @@
   width: 100%;
   min-width: 28rem;
   border-collapse: collapse;
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
 }
 
 .vocab-table th {
@@ -384,14 +384,14 @@
   font-size: 0.6875rem !important;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #795f5b !important;
+  color: var(--vocab-cat-text) !important;
   font-weight: 850 !important;
 }
 
 .register {
   display: block;
   font-size: 0.75rem;
-  color: #875d59;
+  color: var(--register-text);
   font-weight: 500;
   margin-top: 0.15rem;
 }
@@ -402,18 +402,18 @@
 }
 
 .vtask {
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-md);
 }
 
 .vtask:nth-child(2) {
-  border-color: #d9b6b0;
+  border-color: var(--border-task-warm);
 }
 
 .vtask:nth-child(3) {
-  border-color: #b7bdae;
+  border-color: var(--border-task-sage);
 }
 
 .vtask h3 {
@@ -478,7 +478,7 @@
 }
 
 .ru-cues span {
-  background: #eee5d8;
+  background: var(--surface-cue);
   border-radius: var(--radius-sm);
   padding: 0.5rem 0.625rem;
 }
@@ -487,7 +487,7 @@
   margin-top: var(--space-sm);
   padding: 0.625rem 0.75rem;
   border-left: 4px solid var(--rose);
-  background: #f0e2dd;
+  background: var(--surface-produce);
   font-size: 0.8125rem;
   font-weight: 750;
 }
@@ -506,7 +506,7 @@
 .mission {
   border: 2px solid var(--ink);
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(234, 209, 205, 0.88), rgba(255, 250, 242, 0.84));
+  background: var(--gradient-mission);
   padding: var(--space-lg);
 }
 
@@ -530,7 +530,7 @@
 }
 
 .role {
-  background: rgba(255, 250, 242, 0.75);
+  background: var(--surface-warm-soft);
   border-radius: var(--radius-sm);
   padding: var(--space-sm) var(--space-md);
   font-size: 0.875rem;
@@ -539,7 +539,7 @@
 
 .role b {
   display: block;
-  color: #8b5d5b;
+  color: var(--label-warm);
   margin-bottom: 0.25rem;
 }
 
@@ -612,7 +612,7 @@
 }
 
 .phrase {
-  background: rgba(255, 250, 242, 0.7);
+  background: var(--surface-warm-faint);
   border-radius: var(--radius-sm);
   padding: 0.5rem 0.625rem;
   font-size: 0.8125rem;
@@ -621,7 +621,7 @@
 
 .phrase b {
   display: block;
-  color: #8b5d5b;
+  color: var(--label-warm);
   font-size: 0.6875rem;
   margin-bottom: 0.25rem;
 }
@@ -629,7 +629,7 @@
 .exit {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
   padding: var(--space-lg);
 }
 
@@ -688,7 +688,7 @@
 .teacher-note {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255, 250, 242, 0.85);
+  background: var(--surface-warm);
   padding: var(--space-md) var(--space-lg);
 }
 
@@ -696,7 +696,7 @@
   margin: 0 0 0.5rem;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  color: #806f62;
+  color: var(--eyebrow);
 }
 
 .teacher-note p {

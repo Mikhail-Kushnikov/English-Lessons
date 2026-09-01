@@ -1,6 +1,7 @@
 [
   {
     "slug": "english-in-real-life",
+    "studentId": "nastya",
     "title": "English in Real Life",
     "subtitle": "Travel • Digital Detox • Everyday Life",
     "level": "B1–B2",
@@ -8,6 +9,18 @@
     "format": "Online 1:1",
     "topics": ["Travel", "Digital Detox", "Everyday Life"],
     "skills": ["Present tenses", "Vocabulary", "Speaking"],
+    "published": true
+  },
+  {
+    "slug": "workplace-ambition",
+    "studentId": "nastya",
+    "title": "Workplace Ambition",
+    "subtitle": "Fashion Magazine • Office Culture • Career English",
+    "level": "B1–B2",
+    "duration": 60,
+    "format": "Online 1:1",
+    "topics": ["Workplace", "Fashion media", "Career stories"],
+    "skills": ["Past & present narrative", "Vocabulary", "Speaking"],
     "published": true
   }
 ]
