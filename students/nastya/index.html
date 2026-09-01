@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <script>(function () {
+  var month = new Date().getMonth() + 1;
+  var season = "default";
+
+  if (month >= 9 && month <= 11) {
+    season = "autumn";
+  } else if (month === 12 || month <= 2) {
+    season = "winter";
+  } else if (month <= 5) {
+    season = "spring";
+  } else {
+    season = "summer";
+  }
+
+  document.documentElement.dataset.season = season;
+})();
+</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal English lesson library for Настя — online 1:1 classes."
+    />
+    <title>Настя — English Lessons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Serif:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="../../assets/students/nastya/index-Bp63QvA3.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/students-DR01S5TU.js">
+    <link rel="stylesheet" crossorigin href="../../assets/base-Bzvo4cn9.css">
+    <link rel="stylesheet" crossorigin href="../../assets/lesson-C2howYK2.css">
+  </head>
+  <body data-student="nastya">
+    <header class="site-header">
+      <a href="../../">English Lessons</a>
+      <nav aria-label="Student">
+        <a href="../../">All students</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <nav class="lesson-nav" aria-label="Breadcrumb">
+          <a href="../../">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Настя</span>
+        </nav>
+
+        <section class="hero">
+          <p class="lesson-eyebrow">Student library • Online 1:1</p>
+          <h1>Настя</h1>
+          <p>
+            Personal lesson collection — vocabulary from your word lists, grammar
+            workouts, and speaking missions for screen-share classes.
+          </p>
+        </section>
+
+        <section id="lessons" aria-labelledby="lessons-heading">
+          <h2 id="lessons-heading" class="visually-hidden">Lessons for Настя</h2>
+          <div id="lesson-grid" class="lesson-grid"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">Настя • English Lessons</footer>
+
+    <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </body>
+</html>
