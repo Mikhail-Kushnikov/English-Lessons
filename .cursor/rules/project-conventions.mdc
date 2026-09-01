@@ -1,0 +1,47 @@
+---
+description: Project structure and deployment conventions
+globs: project/**/*
+alwaysApply: true
+---
+
+# English Lessons Web — Project Conventions
+
+Work inside `project/` only. `default/` is the print/PDF reference — do not edit it for web.
+
+## Structure
+
+- `index.html` — lesson library home page
+- `lessons/<slug>/index.html` — one self-contained lesson page per slug
+- `src/data/lessons.json` — lesson registry (metadata for home page)
+- `src/styles/` — shared CSS (tokens, base, lesson)
+- `vite.config.js` — auto-discovers lesson folders for build
+
+## Commands
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # static output in dist/
+npm run preview  # preview production build
+```
+
+## Deployment
+
+Build produces static files in `dist/`. Deploy to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages).
+
+- `base: "./"` in production — relative paths work on subpaths and GitHub Pages.
+- No server runtime required.
+
+## Future interactivity
+
+- Add behaviour in `src/scripts/` as ES modules.
+- Prefer progressive enhancement: lesson readable without JS.
+- Interactive widgets (inputs, reveal answers, timers) should use shared classes and data attributes, not inline styles.
+
+## New lesson checklist
+
+- [ ] `lessons/<slug>/index.html` created
+- [ ] Entry added to `src/data/lessons.json`
+- [ ] Follows 6-section lesson structure (see english-lesson-authoring rule)
+- [ ] Responsive at 320px–1280px
+- [ ] `npm run build` passes

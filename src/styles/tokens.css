@@ -1,0 +1,41 @@
+:root {
+  --ink: #282624;
+  --muted: #655f59;
+  --paper: #f7f0e5;
+  --cream: #fffaf2;
+  --rose: #c88f8e;
+  --rose2: #ead1cd;
+  --taupe: #c8b7a2;
+  --sage: #bfc5b8;
+  --line: #d7cab9;
+  --page-bg: #ded6cc;
+
+  --font-sans: "Inter", "Noto Sans", system-ui, sans-serif;
+  --font-serif: "Noto Serif", "Noto Serif Display", Georgia, serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+
+  --content-max: 72rem;
+  --header-height: 3.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

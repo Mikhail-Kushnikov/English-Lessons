@@ -1,0 +1,37 @@
+---
+description: Pedagogical rules for authoring English lesson content
+globs: project/lessons/**/*.html,project/src/data/lessons.json
+alwaysApply: false
+---
+
+# English Lesson Authoring
+
+Every new lesson MUST follow this 60-minute structure (sections 01–06):
+
+1. **Warm-up (5 min)** — 4 prompts mapped to target language functions (routine, change, experience, duration, etc.).
+2. **Grammar / tense workout (20 min)** — 3 tasks: contextual story, error clinic, spoken interview/switch.
+3. **Vocabulary bank (5 min)** — table with EN + IPA + RU; group by theme; mark register risks.
+4. **Vocabulary workout (15 min)** — collocation, precision/register, timed retrieval.
+5. **Speaking mission (12 min)** — scenario, roles, timed rounds, must-use checklist, phrase bank.
+6. **Exit ticket (3 min)** — measurable proof-of-learning checks.
+
+## Task design rules
+
+- **Meaning before form**: every grammar task includes a meaning-check or personalisation step.
+- **Online 1:1**: include at least one "ONLINE MOVE" (chat typing + spoken upgrade).
+- **Retrieval pressure**: at least one task requires covering hints or working from memory.
+- **Register awareness**: label informal/vulgar items; ask students to choose appropriate alternatives.
+- **Teacher note**: end with procedure for input → retrieval → delayed error correction.
+
+## Content constraints
+
+- Target level must be stated (e.g. B1–B2).
+- Total timed sections must sum to ~60 minutes.
+- Vocabulary must recycle into speaking "MUST USE" list.
+- Avoid orphan exercises — each section connects to the lesson theme.
+
+## Adding a lesson
+
+1. Create `lessons/<slug>/index.html` using existing lesson as template.
+2. Register in `src/data/lessons.json` with slug, title, level, duration, topics.
+3. Reuse classes from `src/styles/lesson.css`; do not invent one-off layout systems.

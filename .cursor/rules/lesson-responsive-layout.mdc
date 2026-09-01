@@ -1,0 +1,35 @@
+---
+description: Responsive layout requirements for lesson pages
+globs: project/lessons/**/*.html,project/src/styles/**/*.css
+alwaysApply: false
+---
+
+# Responsive Lesson Layout
+
+All lesson markup must work from 320px phones to desktop without horizontal page scroll.
+
+## Required patterns
+
+- `<meta name="viewport" content="width=device-width, initial-scale=1">` on every page.
+- Use CSS classes from `src/styles/lesson.css` and design tokens from `tokens.css`.
+- Grids must collapse: multi-column → single column on small screens (see `.warm-grid`, `.task-grid`).
+- Wide tables: wrap in `.vocab-table-wrap` for horizontal scroll inside the container only.
+- Typography: use `clamp()` for headings; never fixed pixel font sizes for body text.
+- Touch targets: interactive elements (future) min 44×44px; adequate padding on cards.
+- No fixed heights on content blocks — let content flow naturally.
+
+## Forbidden
+
+- Fixed canvas sizes (e.g. 3508px width) for web lessons.
+- Absolute positioning for main content layout.
+- Hiding essential content on mobile.
+
+## Breakpoint reference
+
+- 480px — 2-column match/ru-cues grids
+- 640px — warm-up 2-col, phrase grid 2-col
+- 768px — lesson header 2-col
+- 900px — speaking zone 2-col
+- 1024px — task grid 3-col, vocab zone 2-col
+
+Test mentally at 320px, 768px, and 1280px before finishing.
